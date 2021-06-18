@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Calculadora de préstamo</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+	<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+	<div class="container">
+		<div class="row">
+			<div class="col-md-3"></div>
+			<div class="col-md-6" style="background:#87ceeb">
+				<h1>Calculadora de préstamo</h1>
+				<form>
+					<div class="form-group">
+						<label for="amount">Monto del préstamo:</label>
+						<input id="amount" type="number" class="form-control" min="1" max="500000" onchange="computeLoan()">
+					</div>
+					<div class="form-group">
+						<label for="interest_rate">Tasa de interés:</label>
+						<input id="interest_rate" type="number" class="form-control" min="0" max="100" value="10" step=".1" onchange="computeLoan()">
+					</div>
+					<div class="form-group">
+						<label for="months">Meses para pagar:</label>
+						<input id="months" type="number" class="form-control" min="1" max="300" value="1" step="1" onchange="computeLoan()">
+					</div>
+					<p id="payment"></p>
+				</form>
+			</div>
+			<div class="col-md-3"></div>
+		</div>	
+	</div>
+
+	<script src="main.js"></script>
+</body>
+</html>
